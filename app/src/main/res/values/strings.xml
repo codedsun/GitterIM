@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">GitterIM</string>
+
+    <!--TOKENS !-->
+    <string name="oauth_key">6ed58fd00e49db1aa862a91276be30b4c7936fd2</string>
+    <string name="token">0e8095cd32b6ea0c8befe982300b0266ab553415</string>
+    <string name="redirect_url">http://about:blank</string>
+    <string name="oauth_secret">582daa67d4eec18552b3c812569e59206474fd7f</string>
+    <string name="callback">http://about:blank</string>
 </resources>
