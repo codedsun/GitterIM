@@ -2,6 +2,7 @@ package com.example.suneet.gitterim;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.AudioManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences=getApplicationContext().getSharedPreferences("PROFILE",0);
         accessToken=sharedPreferences.getString("token","");
         Log.e(TAG, "onCreate: accesstoken"+accessToken );
+        AUTHKEYS.setTOKEN(accessToken);
 
         btnLogin= (Button) findViewById(R.id.btnLogin);
         btnSignUp= (Button) findViewById(R.id.btnSignUp);

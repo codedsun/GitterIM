@@ -94,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.makeText(LoginActivity.this, ""+token, Toast.LENGTH_SHORT).show();
                                         SharedPreferences sharedPreferences=getApplicationContext().getSharedPreferences("PROFILE",0);
                                         sharedPreferences.edit().putString("token",token).apply();
+                                        AUTHKEYS.setTOKEN(token);
                                         Intent i=new Intent(LoginActivity.this,UserActivity.class);
                                         startActivity(i);
                                         finish();
