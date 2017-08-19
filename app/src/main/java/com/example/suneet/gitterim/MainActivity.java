@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -21,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        sharedPreferences=getPreferences(MODE_PRIVATE);
+        sharedPreferences=getApplicationContext().getSharedPreferences("PROFILE",0);
         accessToken=sharedPreferences.getString("token","");
-
+        Log.e(TAG, "onCreate: accesstoken"+accessToken );
 
         btnLogin= (Button) findViewById(R.id.btnLogin);
         btnSignUp= (Button) findViewById(R.id.btnSignUp);
